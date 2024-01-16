@@ -1,0 +1,76 @@
+<html>
+    <head>
+
+        
+        <title>Simbolos con las manos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+
+        <div class="container">
+            <center>
+                <h3 class="btn btn-success heading">
+                    Aplicacion web de gestos manuales
+                    <br>
+                    <span>&#128076;</span>
+                    <span>&#128077;</span>
+                    <span>&#9996;</span>
+                    <span>&#9994;</span>
+                    <span>&#128075;</span>
+                    <span>&#129304;</span>
+                </h3>
+
+                <br>
+                <br>
+
+                <p style="font-size: 22px;">Toma una selfie de un gesto para saber su significado</p>
+                <br>
+                <p style="font-size: 15px;">El modelo se entrena con los siguintes gestos</p>
+
+                <span>&#128076;</span>
+                <span>&#128077;</span>
+                <span>&#9996;</span>
+
+                <br>
+                <br>
+
+                
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <label>Visa de la camara web</label>
+                    <div id="camera"></div>
+                    <br>
+                    <br>
+                    <button class="btn btn-danger" onclick="take_snapshot()">Capturar imagen</button>                        
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <b>PREDICCION ↓</b>
+                    <p class="name_result" id="label_result"></p>
+                    <p class="emoji_result" id="emoji"></p>
+                </div>
+
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <label>Imagen capturada</label>
+                    <div id="result"></div>
+                    <br>
+                    <br>
+                    <button class="btn btn-warning" onclick="check()">Predecir emocion</button>                        
+                </div>
+
+                
+
+            </center>
+        </div>
+
+    </body>
+</html>
